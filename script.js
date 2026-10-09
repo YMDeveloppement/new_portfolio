@@ -61,3 +61,25 @@ function downloadCV(e) {
     link.remove();
   alert("Ajoutez votre fichier CV dans /assets/cv.pdf puis utilisez href=\"assets/cv.pdf\" pour activer le téléchargement.");
 }
+
+let btn_show_more = document.getElementById("show_more_prct");
+btn_show_more.addEventListener("click", () => {
+  if(btn_show_more.dataset.action === "show-less") {
+
+    btn_show_more.dataset.action = "show-more";
+    btn_show_more.textContent = "Voir tous les projets →";
+    const hiddenProjects = document.querySelectorAll(".project-sup");
+    hiddenProjects.forEach(project => {
+      project.style.display = "none";
+    } )
+  } 
+  else{
+    btn_show_more.dataset.action = "show-less";
+    btn_show_more.textContent = "Voir moins de projets →";
+    const hiddenProjects = document.querySelectorAll(".project-sup");
+    hiddenProjects.forEach(project => {
+      project.style.display = "block";
+    } )
+  }
+
+})

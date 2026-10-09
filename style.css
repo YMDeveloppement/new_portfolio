@@ -451,7 +451,7 @@ h2 {
 }
 
 .qualities b {
-  font-size: 10px
+  font-size: 14px
 }
 
 .skills-grid {
@@ -499,16 +499,15 @@ h2 {
 
 .skill-icon.devops {
   color: #ffd36a
-  
 }
 
 .skill-card h3 {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 7px
 }
 
 .skill-card p {
-  font-size: 10px;
+  font-size: 12px;
   color: #9eacc1
 }
 
@@ -545,15 +544,22 @@ h2 {
   height: 145px;
   object-fit: cover;
   background: #eaf2fb;
-  padding: 10px;
+  /* padding: 10px; */
   position: relative;
-  overflow: hidden
+  overflow: hidden;
+
+}
+
+.flexing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-image img {
   height: 145px;
-  object-fit: cover;
- 
+  object-fit: contain;
+
 }
 
 .fake-ui {
@@ -615,11 +621,11 @@ h2 {
 }
 
 .project-title h3 {
-  font-size: 13px
+  font-size: 16px
 }
 
 .project-title small {
-  font-size: 8px;
+  font-size: 10px;
   background: #173b73;
   color: #65adff;
   padding: 4px 7px;
@@ -627,7 +633,7 @@ h2 {
 }
 
 .project-body p {
-  font-size: 10px;
+  font-size: 12px;
   color: #9eacc1;
   margin: 8px 0 12px
 }
@@ -639,7 +645,7 @@ h2 {
 }
 
 .tags span {
-  font-size: 8px;
+  font-size: 10px;
   background: #142b4d;
   color: #a9caff;
   padding: 4px 7px;
@@ -674,10 +680,11 @@ h2 {
 }
 
 .timeline-item h3 {
-  font-size: 14px
+  font-size: 16px
 }
+
 .timeline-item .descript {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: rgb(207, 222, 255);
 }
@@ -961,6 +968,7 @@ footer {
     gap: 12px
   }
 }
+
 /* #################################################################### */
 /* ============ COMPÉTENCES & STACK TECHNIQUE ============ */
 /* Uses the variables already defined in your :root (--blue, --cyan, --purple, --muted...) */
@@ -1001,8 +1009,8 @@ footer {
   align-items: center;
   justify-content: flex-end;
   text-align: center;
-  min-height: 220px;
-  padding: 22px 12px 18px;
+  min-height: 180px;
+  padding: 12px 12px 15px;
   border-radius: var(--radius);
   border: 1px solid rgba(120, 165, 255, .35);
   background:
@@ -1029,8 +1037,8 @@ footer {
 
 .stack-card img,
 .stack-icon-fa {
-  width: 68px;
-  height: 68px;
+  width: 58px;
+  height: 58px;
   margin-bottom: auto;
   margin-top: 8px;
   object-fit: contain;
@@ -1080,9 +1088,11 @@ footer {
 .stack-card.reveal {
   transform: translateY(25px);
 }
+
 .stack-card.reveal.visible {
   transform: none;
 }
+
 .stack-card.reveal.visible:hover {
   transform: translateY(-6px);
 }
@@ -1093,6 +1103,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .stack-divider {
     display: none;
   }
@@ -1102,10 +1113,36 @@ footer {
   .stack-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .stack-title {
     font-size: 26px;
   }
+
   .stack-card {
     min-height: 190px;
   }
+}
+
+/* ########################## */
+
+
+.section-ender {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.section-ender>button {
+  font-size: 11px;
+  color: #52a3ff;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.project-sup {
+  display: none;
 }
